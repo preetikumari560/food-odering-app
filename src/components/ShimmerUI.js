@@ -1,5 +1,15 @@
-
+import EmojiFoodBeverageTwoToneIcon from '@mui/icons-material/EmojiFoodBeverageTwoTone';
 import React from 'react';
+
+export const CarouselShimmer=()=>{
+
+return(  <div className="bg-black  flex items-center justify-center h-[300px]" >
+   <svg className=" absolute animate-spin w-28  rounded-full border-8  border-r-gray-600 " viewBox="0 0 24 24"></svg>
+<EmojiFoodBeverageTwoToneIcon  className=" absolute " style={{ color: 'white',fontSize:"60" }}/>
+  <svg class=" absolute animate-spin  w-32  rounded-full border-2 border-r-gray-600 border-l-gray-600" viewBox="0 0 24 24">
+  </svg>
+</div>)
+}
 
 const Shimmer = () => {
 
@@ -10,6 +20,8 @@ const Shimmer = () => {
   // }
 
   return (<>
+
+  <CarouselShimmer/>
   <div  className="flex justify-center">
   <div  className="m-5 w-56 p-2 focus:outline-none   border-b-4 border-slate-100 " 
 >
