@@ -5,6 +5,7 @@ import useCheckOnline from "../utils/useCheckOnline"
 import userContext from "../utils/userContext"
 import { useContext } from "react"
 import { useSelector } from "react-redux"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const HeaderLogo=()=>(<img className='w-14 m-7 ml-10 border-4 border-solid border-[#E3DFFD]  shadow-lg shadow-blue-400/60 hover:shadow-indigo-500/40 bg-gradient-to-r   border-y-indigo-500/40  hover:from-blue-200/40 hover:to-indigo-900/40'  src={Logo} alt='header-logo'/>)
 
@@ -23,7 +24,7 @@ return(<div className='flex justify-between shadow-md bg-indigo-50'>
 <li className="pr-7 ">{onlineStatus?"🟢":"🔴"}</li>
 <li className="pr-7 hover:text-fuchsia-900/50"><Link to="/about">About Us</Link></li>
 <li className="pr-7 hover:text-fuchsia-900/50"><Link to="/contact">Contact US</Link></li>
-<li className="pr-7 hover:text-fuchsia-900/50"><Link to="/cart">Cart {(cartItems.length>0)?cartItems.length:null}</Link></li>
+<li className="pr-7 "><Link to="/cart"><ShoppingCartIcon fontSize="large" className="  hover:text-fuchsia-900/50"/> {(cartItems.length>0)?cartItems.length:null}</Link></li>
 <li className="font-bold text-2xl">{name}</li>
 </ul>
 
